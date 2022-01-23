@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    background: url(/img/house_header.jpg) no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+}
+
+header::before{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    z-index: 1;
+}
+
+header *{
+    z-index: 5;
+}
+.navbar #logo a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Quicksand', sans-serif !important;
+    margin-right: 10rem;
+    font-size: 2rem;
+    
+    
+    
+}
+.color-text {
+    color: orange;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    position: relative;
+    width: 100%;
+    
+    
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    
+}
+.navbar nav ul a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 30px;
+    opacity: 1;
+}
+.navbar nav ul a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: white;
+    font-size: 1.5rem;
+    flex-direction: column;
+}
+
+.title button {
+    margin-top: 3rem;
+    padding: 10px;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.title button:hover{
+    opacity: 1;
+    
+}
+
+.title button i {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: orange;
+    margin-left: 10px;
+}
+.main-container i {
+    color: orange;
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-around;
+}
+.main-container .box{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main-container .box i {
+    margin-bottom: 10px;
+}
+
+.grid-gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 20%) ;
+    margin-top: 4%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+
+section .grid-gallery img {
+    width: 300px;
+    height: 200px;
+}
+
+.grid-gallery img:hover{
+    opacity: 0.7;
+}
+
+footer div{
+    text-align: center;
+    margin-top: 50px ;
+    padding: 5px 0;
+    background-color: orange;
+    color: black; 
+}
+
+
+/* mobile */
+
+@media (max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    .navbar #logo a{
+        margin: 0;
+    }
+
+    .grid-gallery{
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    section .grid-gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar div nav ul li:first-child a{
+        margin: 0 !important;
+    }
+    .main-container{
+        flex-direction: column;
+        
+    }
+    .main-container .box{
+        margin: 5% 0;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+}
+
