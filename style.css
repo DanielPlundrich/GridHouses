@@ -129,7 +129,7 @@ header *{
 .grid-gallery{
     display: grid;
     grid-template-columns: repeat(4, 20%) ;
-    margin-top: 4%;
+    margin-top: 5%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -151,7 +151,7 @@ footer div{
     margin-top: 50px ;
     padding: 5px 0;
     background-color: orange;
-    color: black; 
+    color: white; 
 }
 
 
