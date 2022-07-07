@@ -24,11 +24,12 @@ header::before{
 header *{
     z-index: 5;
 }
+
+
 .navbar #logo a{
     text-decoration: none;
     color: white;
     font-family: 'Quicksand', sans-serif !important;
-    margin-right: 10rem;
     font-size: 2rem;
     
     
@@ -41,34 +42,58 @@ header *{
 
 .navbar {
     display: flex;
-    justify-content: space-between;
-    line-height: 50px;
+    padding-top: 15px;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     opacity: 0.9;
     position: relative;
-    width: 100%;
-    
-    
+    max-width: 2000px;
+}
+
+.navbar div{
+    display: flex;
+}
+.icons{
+    display: flex;
 }
 
 .navbar nav ul {
     display: flex;
     list-style: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 50px;
+}
+.navbar nav .nav-items{
+    margin-right: 30px;
     
 }
-.navbar nav ul a{
+
+.navbar nav .nav-items a{
     color: white;
     text-decoration: none;
     font-family: 'Quicksand', sans-serif !important;
     font-size: 20px;
     font-weight: 500;
-    margin-left: 30px;
+    margin-left: 40px;
     opacity: 1;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
 .navbar nav ul a:hover {
     color: orange;
     text-decoration: underline;
+}
+
+
+.navbar nav .social-icons a{
+    color: white;
+    font-size: 25px;
+    padding: 0px 5px;
 }
 .title{
     display: flex;
@@ -79,6 +104,7 @@ header *{
     color: white;
     font-size: 1.5rem;
     flex-direction: column;
+    
 }
 
 .title button {
@@ -93,7 +119,7 @@ header *{
     color: white;
     opacity: 0.8;
     text-transform: uppercase;
-    border-radius: 10px;
+    
 }
 
 .title button:hover{
@@ -144,36 +170,111 @@ section .grid-gallery img {
 
 .grid-gallery img:hover{
     opacity: 0.7;
+    cursor: pointer;
 }
 
-footer div{
+footer div.copyright{
     text-align: center;
-    margin-top: 50px ;
+    
     padding: 5px 0;
     background-color: orange;
-    color: white; 
+    color: black; 
+    
+    
 }
 
+.menu-shopping-container{
+    text-align: center;
+    margin-top: 5% ;
+    background-color: orange;
+    
+}
+
+.menu-shopping-container h3{
+    padding-top: 30px;
+    font-size: 2rem;
+}
+
+.menu-shopping-container-items ul{
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 0;
+    
+}
+
+.menu-shopping-container-items ul li {
+    padding: 10px 50px;
+    margin: 20px;
+    background-color: orange;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+.menu-shopping-container-items ul li:hover{
+    box-shadow: 5px 5px 5px black;
+    transition-duration: 0.5s;
+}
+
+.menu-shopping-container-items ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
 
 /* mobile */
 
 @media (max-width: 768px){
     .navbar{
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        
     }
 
     .navbar #logo a{
         margin: 0;
     }
 
+    .navbar div{
+        flex-direction: column-reverse;
+    }
+
+    .navbar div ul li{
+        text-align: center;
+        margin-left: 1em;
+    }
+
+    .navbar div ul li:first-child{
+        margin-left: 0em;
+    }
+
+    .navbar div .nav-items a{
+        font-size: em;
+        margin-left: 0;
+    }
+
+    .navbar nav .nav-items{
+        margin-right: 0;
+    }
+
+    .title{
+        height: 80vh;
+        padding: 0 5px ;
+    }
+
+    .title h1{
+        font-size: calc(1em + 1vw);
+    }
+
     .grid-gallery{
         grid-template-rows: repeat(8, 1fr);
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 1em;
     }
 
     section .grid-gallery img {
@@ -184,16 +285,17 @@ footer div{
     .navbar div nav ul li:first-child a{
         margin: 0 !important;
     }
+
     .main-container{
         flex-direction: column;
-        
     }
+
     .main-container .box{
         margin: 5% 0;
     }
 
-    .title{
-        font-size: 20px;
+    .menu-shopping-container-items ul{
+        grid-template-columns: repeat(1, 75%);
     }
 }
 
